@@ -4,12 +4,12 @@ import java.util.*;
 
 public class Friends {
 
-   // declare and initialize the ArrayList
-   // declare and initialize the Random class
+    ArrayList<Name> Friends = new ArrayList<Name>();
+    Random r = new Random();
    
    // the constructor
    public Friends () {
-       // add three names to the ArrayList
+        Friends.add(Name("bob", "dylan", "chen"));
    }
    
    public void printRandomFriend(){
