@@ -4,17 +4,24 @@ import java.util.*;
 
 public class Friends {
 
-    ArrayList<Name> Friends = new ArrayList<Name>();
+    ArrayList<Name> friends = new ArrayList<Name>();
     Random r = new Random();
+    
    
    // the constructor
    public Friends () {
-        Friends.add(Name("bob", "dylan", "chen"));
+        friends.add(new Name("Bob", "Dylan"));
    }
    
    public void printRandomFriend(){
        //return a random Name object from the List
+       int x = r.nextInt(friends.size());
+       String s = friends.get(x).fullName();
+       System.out.println(s);
     }
    
-  
+  public Name getRandomFriend(){
+    int x = (int)(Math.random()*friends.size());
+    return friends.get(x);
+  }
 }
